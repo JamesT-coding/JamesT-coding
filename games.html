@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<title>Javascript Games</title>
+<style>
+    hr.new2 {border-top: 1px dotted;}    
+    
+</style>
+ 
+    
+</head>
+
+<body>
+   
+<div class="jumbotron">
+     <h1><a href="index.html">James Thaemert's Portfolio</a></h1>
+<div class="moon" onclick="darkmode()"></div>
+    <div class="logo"></div>
+    </div>
+    
+    <div class="container">
+ 
+    <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">Home Page</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active"  href="games.html">Javascript things</a>
+
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="classes.html">Classes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="misc.html" tabindex="-1" aria-disabled="true">Misc.</a>
+  </li>
+</ul>
+<br>       
+   <h4>Games or toys I made in javascript<br> <small>Timewasters</small></h4> 
+
+    <hr class="new2">
+         <div class="row">
+        <div class="col-sm-10">
+            <iframe src="https://editor.p5js.org/Jamest/embed/ynOUa7onR" width="405" height="405"></iframe>
+            </div>
+             <div class="col-sm-2">This was my final for my first year learning javascript using a program called p5.js.</div>
+        </div>
+    <hr class ="new2">
+        <h4>A little 'hypothetical' generator<br><small>Do you accept or reject the offer?</small></h4>
+<hr class="new2">
+        <div class="row">
+            <div class="col-sm-8">
+        <p id="DataOne"></p>
+         <button onClick="hypo()">New Hypothetical</button>
+                </div>
+            <div class="col-sm-4">This is just a fun little time-waster I made during quarantine. It generates a random offer that you are intended to accept or reject.</div>
+    </div>
+        </div>
+  <script>
+    
+             
+    
+    let start = ["Would you", "For a million dollars you can", "You have to pay 20 dollars and you can", "You can never sleep well again but you can","You lose a finger but you can","You can jump 20 feet taller but you can", "You gain 100 pounds but you can", "You become incredibly smart and you","You become famous but","You never have to eat again but","You can never wear a shirt again but"];
+ let action = ["be given surgery by","go to space with","go back in time with","go forward in time due to","kill","be enslaved by","join a cult ran by","be taught by","get intimidated by","get kissed on the forehead by","get infected by","get sued by"];
+ let charac = ["Garfield","Trump","Obama","Nobody","Mario","The United States","Goku","Thanos","Darth Vader","The Heavy","Pacman","Squidward","a Xenomorph","Bob the Tomato","Bolsonaro","Peter Griffin","your least favorite teacher","a minecraft Creeper","yourself","a clone of yourself","God","Homer Simpson", "your mom", "your dog","my mom","Freddy Freaker","Danny Devito","Bob the Builder","Vegeta"];
+ let action2 = ["fight","eat","play Yu-Gi-Oh! with","stare romantically at","kiss", "donate to","steal from","harass", "spit on","laugh at","laugh with", "step on","spy on","justify the murder of","scream at"];
+ 
+
+
+
+//   document.getElementById("DataOne").innerHTML = start[Math.floor(Math.random() * start.length)] + " " + action[Math.floor(Math.random() * action.length)] + " " + charac[Math.floor(Math.random() * charac.length)] + " then " + action2[Math.floor(Math.random() * action2.length)] + " " + charac[Math.floor(Math.random() * charac.length)] + "."
+    
+        
+function darkmode(){
+var element = document.body;
+var hrtog = document.hr;
+
+    
+    element.classList.toggle("darkmode");
+    hrtog.classList.toggle("hrch");
+  
+    
+}
+    function hypo(){
+    document.getElementById("DataOne").innerHTML = start[Math.floor(Math.random() * start.length)] + " " + action[Math.floor(Math.random() * action.length)] + " " + charac[Math.floor(Math.random() * charac.length)] + " then " + action2[Math.floor(Math.random() * action2.length)] + " " + charac[Math.floor(Math.random() * charac.length)] + "."
+    }
+      
+      
+</script>
+</body>
+
+
+
+
+</html>
