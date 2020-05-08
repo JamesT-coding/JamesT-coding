@@ -1,2 +1,0 @@
-# JamesT-coding
-Project website
